@@ -76,7 +76,7 @@ issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_ke
 
 ## 部分暴露
 
-无论是链上存储还是链下存储，如果有部分暴漏的需求，则必需使用加密证书。在出示claim时，holder同时向verifier发送加密证书的需暴露statement的statement_key，则verifer可解密这部分属性。
+无论是链上存储还是链下存储，如果有部分暴露的需求，则必需使用加密证书。在出示claim时，holder同时向verifier发送加密证书的需暴露statements的statement_key，则verifier可解密这部分属性。
 
 
 
