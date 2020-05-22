@@ -101,9 +101,6 @@ isvalid(claimId)//查询该claimId是否为该issue所颁发且是否吊销
 
 
 
-怎么保证claimid是全网唯一的
 
-isvalidHash()
-validateClaim()
-```
+
 
