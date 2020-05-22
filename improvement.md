@@ -50,7 +50,7 @@ issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_ke
 密钥派生使用PBKDF2算法。
 
 
-![](./1.jpg)
+![](./1.png)
 
 
 
