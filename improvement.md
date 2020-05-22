@@ -99,9 +99,7 @@ getclaimSchema(schemaId)//根据schemaId获取schema
 isvalid(claimId)//查询该claimId是否为该issue所颁发且是否吊销
 ```
 
-凭证存在哪里，issuer合约？专门开一个存储凭证的公共区？
 
-加密的怎么存？存的时候验证吗
 
 怎么保证claimid是全网唯一的
 
