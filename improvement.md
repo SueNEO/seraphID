@@ -71,7 +71,7 @@ issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_ke
 
 链下claim的出示在链下进行，holder直接发送给verifier。
 
-链上claim的出示即为向verifier发送hash/claimId（非加密存储）或者hash/claimId+密钥（加密存储）的过程。
+链上claim的出示即为向verifier发送 issuer合约地址 + claimId（非加密存储）或者 issuer合约地址 + 索引值i + 密钥（加密存储）的过程。
 
 
 ## 部分暴露
