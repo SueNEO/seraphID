@@ -10,7 +10,7 @@
 
 支持明文claim的颁发，加密claim和部分加密claim的颁发。每个claim结构如图：
 
-![](newdesign1.png)
+![](../../0.png)
 
 
 Metadata需要包含的字段如下：
@@ -50,7 +50,7 @@ issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_ke
 密钥派生使用PBKDF2算法。
 
 
-![](1.jpg)
+![](../1.jpg)
 
 
 
