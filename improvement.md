@@ -10,7 +10,7 @@
 
 支持明文claim的颁发，加密claim和部分加密claim的颁发。每个claim结构如图：
 
-![](../../0.png)
+![](./0.png)
 
 
 Metadata需要包含的字段如下：
