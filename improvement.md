@@ -90,6 +90,8 @@ issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_ke
 
 ## issuer合约接口
 
+每个正规的issuer都需要部署自己的合约以进行链上存证撤销等操作。
+
 ```
 issueClaim(claimId)//只有issuer可以调用
 revokeClaim(claimId)//只有issuer可以调用
