@@ -18,7 +18,7 @@ Metadata需要包含的字段如下：
 |属性|描述|
 |------|------|
 |@context|用来描述claim中出现的每个术语的schema|
-|type|claim类型|
+|type|claim类型,有两种，加密claim和明文claim|
 |claimId|claim的编号，可唯一标识该claim
 |issuer|颁发者的ID
 |issuanceDate|颁发日期
@@ -41,13 +41,15 @@ proof--略
 
 ## claim颁发
 
+明文证书颁发--略
+
 issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_key由holder生成，不可复用，一个证书对应一个claim_key。该claim_key只有issuer和holder两个人知道。使用该claim_key派生出每条statement的statement_key，使用派生出的statement_key对该条statement的值对称加密。salt和iteration由issuer来指定（issuer的密钥派生采用PBKDF2来实现），需要注意的是，对于一个证书，issuer在为该证书生成salt时，salt不能重复。且issuer在颁发完证书后，是默认不保存claim_key的。
 
 用户在收到issuer颁发的证书时，需要根据每一条statement中的salt和iteration结合该证书的claim_key恢复每一个statement_key，解密密文，验证证书是否无误。
 
 为了避免holder重复设置很多密码，holder亦可使用派生密钥的方法，用privateKey来派生claim_key，同样需要保证salt不重复，进而该用户的每一个证书的claim_key不重复。
 
-密钥派生使用PBKDF2算法。
+密钥派生可使用PBKDF2算法。
 
 
 ![](./1.png)
@@ -71,7 +73,7 @@ issuer在颁发加密证书时，需要和holder共享一个claim_key，claim_ke
 
 链下claim的出示在链下进行，holder直接发送给verifier。
 
-链上claim的出示即为向verifier发送 issuer合约地址 + claimId（非加密存储）或者 issuer合约地址 + 索引值i + 密钥（加密存储）的过程。
+链上claim的出示即为向verifier发送 `issuer合约地址` + `claimId`（非加密存储）或者 `issuer合约地址` + `索引值i` + `密钥`（加密存储）的过程。
 
 
 ## 部分暴露
