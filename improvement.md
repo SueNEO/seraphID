@@ -27,7 +27,7 @@ setAttribute(NeoID,attribute,value)    //需提供所有者的签名
 
 支持明文claim的颁发，加密claim和部分加密claim的颁发。每个claim结构如图：
 
-<img,src="./0.png",width="50%">
+<img src="./0.png" width="50%">
 
 
 Metadata需要包含的字段如下：
