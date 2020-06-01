@@ -49,7 +49,7 @@ Metadata需要包含的字段如下：
 |属性|描述|
 |------|------|
 |key|键|
-|type|类型，有两种：可以是plain(明文)，也可以是proof(加密后的结果)|
+|type|类型，有两种：可以是plain(明文)，也可以是cipher(加密后的结果)|
 |value|值|
 |encryptionArithmetic|加密算法，如果type字段为proof,则该字段为必需，否则不需要|
 |parameter|密钥对应的参数，可以是salt，也可以是种子，根据加密算法而定；如果type字段为proof，则该字段为必需，否则不需要|
