@@ -11,12 +11,12 @@
 用native合约来实现，接口如下：
 
 ```
-addDID(NeoID,publickey)    //需提供参数中的公钥对应私钥的签名。调用成功后链上自动生成该did对应的DID doccument，且该公钥与该did绑定
-deleteDID(NeoID,publickey)    //需提供参数中的公钥对应私钥的签名。调用成功后该did对应的DID doccument清空
-updateKey(NeoID,publickey)    //需提供所有者的签名
-setRecovery(NeoID,recovery,threhold)    //需提供所有者的签名
-updateKeyByRecovery(NeoID,publickey)    //需提供恢复人的签名
-getDDO(NeoID)      //获取DID doccument
+addDID(NeoID,publickey)                //需提供参数中的公钥对应私钥的签名。调用成功后链上自动生成该did对应的DID doccument，且该公钥与该did绑定
+deleteDID(NeoID,publickey)             //需提供参数中的公钥对应私钥的签名。调用成功后该did对应的DID doccument清空
+updateKey(NeoID,publickey)             //需提供所有者的签名
+setRecovery(NeoID,recovery,threhold)   //需提供所有者的签名
+updateKeyByRecovery(NeoID,publickey)   //需提供恢复人的签名
+getDDO(NeoID)                          //获取DID doccument
 setAttribute(NeoID,attribute,value)    //需提供所有者的签名
 
 ```
