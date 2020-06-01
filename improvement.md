@@ -72,9 +72,22 @@ proof指数字签名，支持单个文档中的多个证明。示例如下：
 
 
 
+
 ### claim颁发
 
-issuer在颁发加密证书时，可根据用户的加密策略隐藏不想被人知道的value。NEO支持不同的隐藏策略，比如哈希，加密。
+一个正规的issuer应该部署自己的合约，该合约至少应该提供链上存证，撤销证书，发布/获取合约模板，证书编号验证的功能。
+
+
+```
+issueClaim(claimId)          //只有issuer可以调用
+revokeClaim(claimId)         //只有issuer可以调用
+AddclaimSchema(schema)       //只有issuer可以调用
+getclaimSchema(schemaId)     //根据schemaId获取schema
+isvalid(claimId)             //查询该claimId是否为该issue所颁发且是否吊销
+```
+
+
+不同于明文证书，issuer在颁发加密证书时，可根据用户的加密策略隐藏不想被人知道的value。NEO支持不同的隐藏策略，比如哈希，加密。
 
 在使用哈希策略时，可以将value哈希后的值填入stamentment的value项。注意，哈希策略只适用于值域很大且不固定的情况，否则很容易被破解。
 
@@ -83,6 +96,9 @@ issuer在颁发加密证书时，可根据用户的加密策略隐藏不想被�
 因为每一个holder可能有很多claim，为了避免holder重复设置很多密码，holder亦可使用派生密钥的方法，用privateKey来派生claim_key。
 
 用户在收到issuer颁发的证书时，需要根据每一条statement中的encryptionArithmetic和parameter，恢复密文，验证证书是否无误。
+
+
+
 
 
 
